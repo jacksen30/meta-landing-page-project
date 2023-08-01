@@ -95,31 +95,71 @@ body {
   font-family: 'Karla', sans-serif;
 }
 
+.container {
+  width: 90%;
+}
+
+.flex {
+  display: flex;
+}
 
 .header {
-
+  border: 1px solid green;
 }
 
 .nav {
+  border: 1px solid rgb(0, 2, 128);
+  justify-content: center;
+}
 
+ul {
+  border: 1px solid rgb(128, 0, 105);
+  flex-direction: row;
+  justify-content:flex-end;
+  list-style: none;
+  width: 50%;
+}
+
+ul li {
+  border: 1px solid rgb(0, 113, 128);
+  margin-left: 5rem;
+}
+
+.nav--primary_link {
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .main {
+  border: 1px solid green;
+}
 
+.hero-wrapper {
+  height: 200px;
+  border: 1px solid purple;
+  margin: 2rem auto;
+}
+
+.hero-left-div {
+  padding: 1.2rem 2rem 1.2rem 1.2rem;
 }
 
 .content-wrapper {
-
+  border: 1px solid rgb(222, 87, 121);
+  margin: 0 auto;
+  justify-content:space-between;
 }
 
 .content-box {
-
+  border: 1px solid rgb(128, 0, 0);
+  height: 400px;
+  width: 400px;
 }
 
 .content-box1 {
-
+  border: 1px solid green;
 }
 
 .footer {
-
+  border: 1px solid rgb(128, 0, 92);
 }
