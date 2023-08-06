@@ -84,12 +84,6 @@ The element will be visually hidden but will still be read by screen reader tech
 
 /* MY CUSTOM CSS RULES BELOW */
 
-:root {
-  --color1: hsl(179 53% 50%); /* Change These colors & names */
-  --color2: hsl(71, 73%, 54%);
-  --color3: hsl(0, 0%, 100%);
-}
-
 body {
   background-color: hsl(204, 43%, 93%);
   font-family: 'Karla', sans-serif;
@@ -104,16 +98,16 @@ body {
 }
 
 .header {
-  border: 1px solid green;
+/* border: 1px solid green; */
 }
 
 .nav {
-  border: 1px solid rgb(0, 2, 128);
+/*  border: 1px solid rgb(0, 2, 128); */
   justify-content: center;
 }
 
 ul {
-  border: 1px solid rgb(128, 0, 105);
+/* border: 1px solid rgb(128, 0, 105); */
   flex-direction: row;
   justify-content:flex-end;
   list-style: none;
@@ -121,7 +115,7 @@ ul {
 }
 
 ul li {
-  border: 1px solid rgb(0, 113, 128);
+/*  border: 1px solid rgb(0, 113, 128); */
   margin-left: 5rem;
 }
 
@@ -131,28 +125,41 @@ ul li {
 }
 
 .main {
-  border: 1px solid green;
+/* border: 1px solid green; */
 }
 
 .hero-wrapper {
   max-height: fit-content;
-  border: 1px solid purple;
+/*  border: 1px solid purple; */
+  border-radius: 20px;
   margin: 2rem auto;
   justify-content: space-between;
   background-color: rgb(50, 186, 32);
+  background-image: url("../images/img1.jpg");
+  background-size:contain;
+  opacity: 1;
 }
 
 /* All hero divs */
 .hero-div {
- border: 1px dotted yellow;
+/* border: 1px dotted yellow; */
  font-size: 2.25rem;
  text-align: center;
  text-justify: center;
+ transition: 0.5s;
+}
+
+.hero-div > p {
+  background-color: aliceblue;
 }
 
 .hero-div-1 {
   padding: 1.2rem 2rem 1.2rem 1.2rem;
   flex-shrink: 1;
+}
+
+.hero-div-1:hover {
+  transform: rotate(360deg);
 }
 
 .banner-img-1 {
@@ -169,18 +176,24 @@ ul li {
 }
 
 .content-wrapper {
-  border: 1px solid rgb(222, 87, 121);
+/*  border: 1px solid rgb(222, 87, 121); */
   margin: 0 auto 2rem auto;
   justify-content:space-between;
 }
 
 .content-box {
-  border: 1px solid rgb(128, 0, 0);
+/*  border: 1px solid rgb(128, 0, 0); */
+  border-radius: 20px;
   width: 30%;
 }
 
+.content-box:hover {
+  transform: scale(1.05);
+  background-color: antiquewhite;
+}
+
 .footer {
-  border: 1px solid rgb(128, 0, 92);
+/*  border: 1px solid rgb(128, 0, 92); */
   padding: 1rem;
   justify-content: space-between;
 }
@@ -215,4 +228,30 @@ article {
 .article-img {
   max-width: 75%;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 800px) {  
+  
+  .hero-div > p {
+    font-size: 1.25rem;
+  }
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .content-box {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .nav .container {
+    display: block;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  ul li {
+    margin-left: 0;
+  }
+  
 }
